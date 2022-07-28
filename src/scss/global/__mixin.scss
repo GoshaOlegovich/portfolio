@@ -1,0 +1,10 @@
+@mixin media($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+}

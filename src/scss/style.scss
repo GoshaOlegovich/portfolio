@@ -1,0 +1,20 @@
+// Base settings and reset
+@import 'global/_var';
+@import 'global/_mixin';
+@import 'global/_reset';
+
+// Container
+@import 'components/_container';
+
+// Fonts settings
+@import 'global/_typography';
+
+// Components
+@import 'components/_header';
+
+
+// Layout
+
+@import '_layout';
+@import 'components/_shapes'
+
