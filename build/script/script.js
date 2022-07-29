@@ -39,3 +39,18 @@ window.addEventListener('scroll', () => {
     }
 
 })
+
+const burger = document.querySelector('.header__burger')
+
+
+burger.addEventListener('click', () => {
+    let i = 0;
+    if (i === 0) {
+        i = 1;
+        burger.classList.add('header__burger-active')
+    } else if (i === 1) {
+        i = 0;
+        console.log('close');
+        burger.classList.remove('header__burger-active');
+    }
+})

@@ -10,6 +10,12 @@
     align-items: center;
     height: 90vh;
     gap: 150px;
+
+    @include media(768px) {
+      height: auto;
+      gap: 50px;
+      padding: 50px 0 150px 0;
+    }
   }
 
   &__col {
@@ -20,8 +26,11 @@
     position: relative;
     width: 100%;
     max-width: 500px;
-
     transition: linear 0.5s;
+
+    @include media(768px) {
+     max-width: 300px;
+    }
 
     &::before {
         z-index: 1;
@@ -70,7 +79,10 @@
     justify-content: space-around;
     height: 100vh;
     @include media(768px) {
+      flex-direction: column;
+      text-align: center;
       height: auto;
+      gap: 40px;
     }
   }
 
@@ -98,6 +110,10 @@
       .services__arrow {
         transform: rotate(35deg);
       }
+    }
+
+    @include media(768px) {
+      text-align: left;
     }
   }
   &__img {

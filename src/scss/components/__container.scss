@@ -11,9 +11,10 @@
 
     @include media(768px) {
         max-width: 720px;
-        padding: 0 10px;
+       
     }
     @include media(576px) {
         max-width: 540px;
+        padding: 0 10px;
     }
 }
