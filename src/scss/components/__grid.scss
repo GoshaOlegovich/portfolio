@@ -1,0 +1,22 @@
+.grid {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 50px;
+    &-col {
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+@include media(786px) {
+    .grid {
+        grid-auto-flow: row;
+        &-col {
+
+        }
+    }
+
+  
+}

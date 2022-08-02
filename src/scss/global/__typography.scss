@@ -76,3 +76,13 @@ p {
       font-size: 1.6rem;
     }
   }
+
+
+  .title__h1,
+    .title__h3,
+    .title__sub {
+      transition: linear 0.3s;
+      &:hover {
+        transform: scale(1.025);
+      }
+    }

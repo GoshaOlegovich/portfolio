@@ -4,11 +4,12 @@
     top: 0;
     transition: linear 1s;
     width: 100%;
+    background-color: #101b2e3e;
     &__content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 10vh;
+        padding: 20px 0 15px 0;
     }
 
     &__logo {
@@ -19,6 +20,10 @@
         display: flex;
         gap: 48px;
         align-items: center;
+
+        @include media(768px) {
+            display: none;
+        }
     }
 
 
@@ -36,7 +41,7 @@
     }
     
     &__burger {
-        display: block;
+        display: none;
         width: 50px;
         height: 2px;
         background-color: rgb(255, 255, 255);
