@@ -82,6 +82,7 @@ function watch() {
 
 
 function main() {
+    minJs()
     include()
     style()
     watch();

@@ -5,16 +5,30 @@
 
 // Container
 @import 'components/_container';
+@import 'components/_grid';
 
 // Fonts settings
 @import 'global/_typography';
 
 // Components
 @import 'components/_header';
+@import 'components/_footer';
+@import 'components/_buttons';
 
 
 // Layout
-@import 'components/_grid';
-@import '_layout';
-@import 'components/_shapes'
 
+@import 'sections/_about';
+@import 'sections/_projects';
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    padding: 50px 0;
+    display: grid;
+    gap: 100px;
+  }
+  
