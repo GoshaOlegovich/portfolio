@@ -6,10 +6,15 @@
     align-items: center;
     gap: 50px;
     justify-content: center;
+    &--stick_top {
+        align-items: flex-start;
+    }
+
     &-col {
         width: 100%;
         max-width: 700px;
     }
+    
 }
 
 @include media(786px) {
