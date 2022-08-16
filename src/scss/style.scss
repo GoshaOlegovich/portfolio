@@ -14,6 +14,7 @@
 @import 'components/_header';
 @import 'components/_footer';
 @import 'components/_buttons';
+@import 'components/_menu';
 
 
 // Layout
@@ -28,7 +29,6 @@
 
 .wrapper {
     width: 100%;
-    padding: 50px 0;
     display: grid;
   }
 
