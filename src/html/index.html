@@ -1,144 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('components/head.html', {
-'GoogleFont' :
-'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
-'tittle' : 'Project name',
-})
+  @@include('components/head.html', { 'GoogleFont' :
+  'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
+  'tittle' : 'Project name', })
 
-<body>
-<div class="shaphes">
-    <img class='shaphes__item' src="./assets/img/shapes/shape-1.png" alt="">
-    <img class='shaphes__item' src="./assets/img/shapes/shape-2.png" alt="">
-</div>
-@@include('components/header.html')
-<div class="wrapper">
+  <body>
 
-    <section class="about" id="about">
+
+    <div class="wrapper">
+     
+      <div class="menu">
+        <div class="menu__btn">
+          <span class="menu__btn-line"></span>
+        </div>
+        <ul class="menu__links">
+          <li class="menu__link">About</li>
+          <li class="menu__link">Projects</li>
+          <li class="menu__link">Contacts</li>
+        </ul>
+      </div>
+      <section class="about" id="about">
         <div class="container">
+          <div class="grid">
+            <div class="grid-col">
+              <h1 class="title__h1">Front-End Developer</h1>
+              <h3 class="title__h3">Igor Lugovskoy</h3>
+
+              <p class="title__sub">
+                I can help you implement a modern user interface, which brings
+                profit to your business.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="about__img">
+                <img src="./assets/img/photo.webp" alt="photo" />
+              </div>
+            </div>
+          </div>
+          <a class="arrow-down" href="#projects">
+            More
+          </a>
+        </div>
+        <div class="waves">
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <div class="grid">
+            <div class="col">
+              <a data-index='0' class="project-card">
+                <div class="project-card__preview">
+                  <img data-index='0' src="./assets/img/project01.jpg" alt="">
+                </div>
+                <div class="project-card__desc">
+                 <div class="project-card__text">
+                  <h4 class="project-card__title">
+                    Session Artist
+                  </h4>
+                  <p class="project-card__subtitle">
+                    Figma to HTML/CSS
+                  </p>
+                 </div>
+                  <div class="project-card__use-tech">
+                    <div class="project-card__tech-ico">
+                      <img src="./assets/img/ico/html.svg" alt="">
+                    </div>
+                    <div class="project-card__tech-ico">
+                      <img src="./assets/img/ico/css.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a data-index='1' class="project-card">
+                <div class="project-card__preview">
+                  <img data-index='1' src="./assets/img/project01.jpg" alt="">
+                </div>
+                <div class="project-card__desc">
+                 <div class="project-card__text">
+                  <h4 class="project-card__title">
+                    Session Artist
+                  </h4>
+                  <p class="project-card__subtitle">
+                    Figma to HTML/CSS
+                  </p>
+                 </div>
+                  <div class="project-card__use-tech">
+                    <div class="project-card__tech-ico">
+                      <img src="./assets/img/ico/html.svg" alt="">
+                    </div>
+                    <div class="project-card__tech-ico">
+                      <img src="./assets/img/ico/css.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+         
+          </div>
+
+          
+          <div class="project">
             <div class="grid">
-                <div class="grid-col">
-                    <h1 class="title__h1">Front-End Developer</h1>
-                    <h3 class="title__h3">Igor Lugovskoy</h3>
-                    <div class="about__line"></div>
-                    <p class="title__sub">I can help you implement a modern user interface, which brings profit to your business.</p>
-                </div>
-                <div class="grid-col">
-                    <div class="about__img">
-                        <img src="./assets/img/photo.webp" alt="photo">
-                    </div>
-                </div>
-               
-                
-            </div>
-        </div>
-    </section>
-    
-    <section class="services" id="services">
-        <div class="container">
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/main.jpg" alt=""></div>
+              <div class="grid-col">
+                <h3 class="title__h3 project__title">
+                  Session Artist
+                </h3>
+                <p class="project__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non porro laudantium magnam quas fugiat culpa odit quidem eaque error aspernatur ut quisquam voluptatibus voluptatum dolor labore, facilis repellat molestiae.</p>
+                <a class="project__link" href="#"> Link to project</a>
+              </div>
+             </div>
+             
+
+             <div class="grid grid--stick_top">
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/catalog.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/service_profile.jpg" alt=""></div>
+             
+             </div>
+
+             <div class="grid">
+              <div class="grid-col">
+                <h3 class="title__h3 project__title">
+                  Tech
+                </h3>
+                <p class="project__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non porro laudantium magnam quas fugiat culpa odit quidem eaque.</p>
+                <ul class="project__list">
+                  <li class="project__list-item">#HTML</li>
+                  <li class="project__list-item">#SCSS</li>
+                  <li class="project__list-item">#JavaScript</li>
+                  <li class="project__list-item">#Gulp</li>
+                </ul>
+              </div>
+             
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/user_profile.jpg" alt=""></div>
+             
+             </div>
+
+             <div class="grid">
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-01.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-02.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-03.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-04.jpg" alt=""></div>
+
+             </div>
+          </div>
+          
+          <div class="project" style="background-color: blue;">
             <div class="grid">
-               
-                <div class="grid-col">
-                    <div class="services__item">
-                        <div class="services__img">
-                            <img src="./assets/img/ico/code.svg" alt="">
-                        </div>
-                        <div class="services__title">
-                            Website Developement
-                        </div>
-                        <button class="services__arrow">
-                            <img src="./assets/img/arrow.svg" alt="">
-                        </button>
-                
-                    </div>
-                    <div class="services__item">
-                        <div class="services__img">
-                            <img src="./assets/img/ico/update.svg" alt="">
-                        </div>
-                        <div class="services__title">
-                            Updating your website
-                        </div>
-                        <button class="services__arrow">
-                            <img src="./assets/img/arrow.svg" alt="">
-                        </button>
-                
-                    </div>
-                    <div class="services__item">
-                        <div class="services__img">
-                            <img src="./assets/img/ico/uxui.svg" alt="">
-                        </div>
-                        <div class="services__title">
-                            UX/UI Design
-                        </div>
-                        <button class="services__arrow">
-                            <img src="./assets/img/arrow.svg" alt="">
-                        </button>
-                
-                    </div>
-                </div>
-    
-                <div class="grid-col">
-                    <h3 class="title__h3">
-                        Services
-                    </h3>
-                    <p class="text">
-                        Eget malesuada tortor ut sed. Tincidunt viverra malesuada nisl vehicula vestibulum. Ut blandit fermentum, cursus nulla. Imperdiet neque mi convallis quis interdum sagittis.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/main.jpg" alt=""></div>
+              <div class="grid-col">
+                <h3 class="title__h3 project__title">
+                  Session Artist
+                </h3>
+                <p class="project__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non porro laudantium magnam quas fugiat culpa odit quidem eaque error aspernatur ut quisquam voluptatibus voluptatum dolor labore, facilis repellat molestiae.</p>
+                <a class="project__link" href="#"> Link to project</a>
+              </div>
+             </div>
+             
 
-    <section class="portfolio" id="portfolio">
+             <div class="grid grid--stick_top">
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/catalog.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/service_profile.jpg" alt=""></div>
+             
+             </div>
+
+             <div class="grid">
+              <div class="grid-col">
+                <h3 class="title__h3 project__title">
+                  Tech
+                </h3>
+                <p class="project__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non porro laudantium magnam quas fugiat culpa odit quidem eaque.</p>
+                <ul class="project__list">
+                  <li class="project__list-item">#HTML</li>
+                  <li class="project__list-item">#SCSS</li>
+                  <li class="project__list-item">#JavaScript</li>
+                  <li class="project__list-item">#Gulp</li>
+                </ul>
+              </div>
+             
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/user_profile.jpg" alt=""></div>
+             
+             </div>
+
+             <div class="grid">
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-01.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-02.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-03.jpg" alt=""></div>
+              <div class="grid-col project__img"><img src="./assets/img/projects/SA/SA-mob-04.jpg" alt=""></div>
+
+             </div>
+          </div>
+        </div>
+     
+      </section>
+      
+      
+      <section class="contact">
         <div class="container">
-            <div class="portfolio__wrapper">
-                <div class="grid">
-                    <div class="grid-col">
-                        <h3 class="title__h3 portfolio__title">Portfolio</h3>
-                        <p class="text">
-                            Eget malesuada tortor ut sed. Tincidunt viverra malesuada nisl vehicula vestibulum. Ut blandit fermentum, cursus nulla. Imperdiet neque mi convallis quis interdum sagittis.
-                        </p>
-                        <button class="portfolio__btn-more">Watch more</button>
-                    </div>
-                  
-                    <div class="grid-col">
-                        <div class="grid">
-                            <div class="grid-col">
-                                <div class="portfolio__card">
-                                    <div class="portfolio__img">
-                                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="">
-                                    </div>
-                                    <div class="portfolio__card-desc">
-                                        <h4 class="portfolio__card-title">Website #01</h4>
-                                        <p class="portfolio__card-category">Landing page</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-col">
-                                <div class="portfolio__card">
-                                    <div class="portfolio__img">
-                                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="">
-                                    </div>
-                                    <div class="portfolio__card-desc">
-                                        <h4 class="portfolio__card-title">Website #02</h4>
-                                        <p class="portfolio__card-category">Landing page</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-               
+          <div class="grid">
+            <div class="grid-col">
+             <div class="contact__img">
+              <img src="./assets/img/contact.jpg" alt="">
+             </div>
             </div>
-           
+            <div class="grid-col">
+              <div class="contact__links">
+                <h3 class="contact__title">Write to me</h3>
+                <form class="contact__form" action="https://formspree.io/f/xbjbjqrv"
+                method="POST">
+                  <input type="text" name='name' class="contact__input" placeholder="Your Name">
+                  <input type="phone" name="phone" class="contact__input" placeholder="Phone nomber">
+                  <input type="email" name="email" class="contact__input" placeholder="Email">
+                  <textarea type="text"  name="message" class="contact__input contact__text-area" placeholder="Your Message"></textarea>
+                  <button class="contact__submit" type="submit">Submit</button>
+                </form>       
+              </div>
+             
+
+              <div class="contact__links">
+                <h3 class="contact__title">Contact me</h3>
+                <div class="contact__socials">
+                  <a href="#" class="contact__link"><img src="./assets/img/ico/linkedin.svg" alt=""></a>
+                  <a href="#" class="contact__link"><img src="./assets/img/ico/upwork.svg" alt=""></a>
+                  <a href="#" class="contact__link">Email</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
         </div>
-    </section> 
-</div>
-
-
-
-<script type="text/javascript" src="./script/script.js"></script>
-</body>
-
+      </section>
+    <script type="text/javascript" src="./script/script.js"></script>
+  </body>
 </html>

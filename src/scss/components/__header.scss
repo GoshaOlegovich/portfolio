@@ -35,6 +35,16 @@
         &-active {
             opacity: 100%;
         }
+        // &-contact {
+        //     border: solid 1px rgba(255, 255, 255, 0.241);
+        //     border-radius: 5px;
+        //     padding: 5px 12px;
+        //     background-color: #091427a3;
+        //     &:hover {
+        //         background-color: white;
+        //         color: black;
+        //     }
+        // }
         &:hover {
             opacity: 90%;
         }
@@ -42,6 +52,7 @@
     
     &__burger {
         display: none;
+        cursor: pointer;
         width: 50px;
         height: 2px;
         background-color: rgb(255, 255, 255);
@@ -80,4 +91,12 @@
         }
     }
 
+}
+
+@include media(786px) {
+    .header {
+        &__burger {
+            display: block;
+        }
+    }
 }

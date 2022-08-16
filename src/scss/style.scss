@@ -5,16 +5,34 @@
 
 // Container
 @import 'components/_container';
+@import 'components/_grid';
 
 // Fonts settings
 @import 'global/_typography';
 
 // Components
 @import 'components/_header';
+@import 'components/_footer';
+@import 'components/_buttons';
+@import 'components/_menu';
 
 
 // Layout
-@import 'components/_grid';
-@import '_layout';
-@import 'components/_shapes'
 
+@import 'sections/_about';
+@import 'sections/_projects';
+@import 'sections/_contact';
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    display: grid;
+  }
+
+.display-none { // Delet
+  display: none;
+}
+  

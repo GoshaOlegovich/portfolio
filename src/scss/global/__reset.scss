@@ -33,6 +33,7 @@ a {
 }
 
 button {
+    padding: 0;
     border: none;
     background-color: inherit;
     cursor: pointer;
@@ -40,8 +41,9 @@ button {
 
 img {
     width: 100%;
+    line-height: 0;
     position: relative;
-    z-index: 150;
+
 }
 
 section {
