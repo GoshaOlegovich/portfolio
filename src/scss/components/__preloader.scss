@@ -1,0 +1,24 @@
+.preloader {
+    display: none;
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+
+    background-color: #000000;
+
+    animation-name: preloader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes preloader {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

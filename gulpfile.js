@@ -40,7 +40,7 @@ function minJs() {
 
 
 function include() {
-    return gulp.src(['src/html/index.html'])
+    return gulp.src(['src/html/index.html', 'src/html/pages/*.html'])
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
