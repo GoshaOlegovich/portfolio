@@ -1,3 +1,4 @@
+
 const preloader = document.querySelector('.preloader')
 
 window.addEventListener('load', () => {
@@ -8,38 +9,58 @@ window.addEventListener('load', () => {
         console.log('end')
     }, 3000);
 }) 
+const progressbar = document.querySelector('.progressbar')
 
-// Menu
-const menuBtn = document.querySelector('.menu__btn');
-const menuLinks = document.querySelector('.menu__links');
+window.addEventListener('scroll', () => {
+    let clientY = scrollY ;
+    let documentHeigth = 1093;
 
+    let scrollPosition = (clientY * 100) / documentHeigth;
+    console.log(clientY, documentHeigth, scrollPosition);
 
-menuBtn.addEventListener('click', () => {   
-    if(menuBtn.classList.contains('menu__btn--active')) {
-        menuBtn.classList.remove('menu__btn--active')
-        menuLinks.classList.remove('menu__links--active')
-    } else {
-        menuBtn.classList.add('menu__btn--active')
-        menuLinks.classList.add('menu__links--active')
+    progressbar.style.width = `${scrollPosition}%`
+})
+
+const themeSwitchBtn = document.querySelector('.header__theme'),
+      themeDayIco = document.querySelector('.theme-btn__theme_day'),
+      themeNightIco = document.querySelector('.theme-btn__theme_nigth');
+// const activeThemeClass = 'theme-btn__active', 'header__theme__active';
+let currentTheme = true;
+
+themeSwitchBtn.addEventListener('click', () => {
+
+    if (currentTheme === true) {
+        currentTheme = false;
+        themeNightIco.classList.remove('theme-btn__active');
+        themeSwitchBtn.classList.add('header__theme__active');
+        themeDayIco.classList.add('theme-btn__active');
+        themCheck()
+        console.log('Day');
+    }
+    else if (currentTheme === false) {
+        currentTheme = true;
+        themeSwitchBtn.classList.remove('header__theme__active');
+        themeDayIco.classList.remove('theme-btn__active');
+        themeNightIco.classList.add('theme-btn__active');
+        themCheck()
+        console.log('Nigth');
     }
 })
 
-//
 
-const projectLinks = document.querySelectorAll('.project-card')
-const projects = document.querySelectorAll('.project')
-console.log(projects);
-for (let i = 0; i < projectLinks.length; i++) {
-    console.log(projectLinks[i].dataset.index);
-    projectLinks[i].addEventListener('click', (e) => {
-       let el = e.target.dataset.index;
-        projectShow(el)
-    })
-}
+// 
+const about = document.querySelector('.about')
 
-const projectShow = (index) => {
-    for (let i = 0; i < projects.length; i++) {
-        projects[i].style.display = "none"
-        projects[index].style.display = "grid"
+
+
+const themCheck = () => {
+    if (currentTheme === true) {
+        about.classList.remove('about__theme_nigth')
+        about.classList.add('about__theme_day')
+
     }
-} 
+    else if (currentTheme === false) {
+        about.classList.remove('about__theme_day')
+        about.classList.add('about__theme_nigth')
+    }
+}

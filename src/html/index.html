@@ -5,29 +5,11 @@
   'tittle' : 'Project name', })
 
   <body>
-
-
-    <div class="wrapper">
-     
-      <div class="menu">
-        <div class="menu__btn">
-          <span class="menu__btn-line"></span>
-        </div>
-        <ul class="menu__links">
-          <li class="menu__link">About</li>
-          <li class="menu__link">Projects</li>
-          <li class="menu__link">Contacts</li>
-        </ul>
-      </div>
-      
-      @@include('./sections/about.html')
-      @@include('./sections/projects.html')
-      @@include('./sections/contact.html')
-
-
-      
-      
-      
+    @@include('./components/header.html')
+    @@include('./sections/about.html') 
+    <!-- @@include('./sections/projects.html')
+    @@include('./sections/contact.html') -->
+  
       
     <script type="text/javascript" src="./script/script.js"></script>
   </body>

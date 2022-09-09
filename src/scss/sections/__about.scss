@@ -1,21 +1,35 @@
 .about {
   position: relative;
-  padding: 50px 0;
-  overflow: hidden;
+
+  padding: 70px 0;
+  
   &__img {
     position: relative;
     width: 100%;
     max-width: 500px;
     line-height: 0;
     transition: linear 0.5s;
-    
+
     &:hover {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       transform: scale(1.025);
+    }
 
+    
+  }
+
+  &__theme_day {
+    background-color: $bodyColor;;
+  }
+  &__theme_nigth {
+    background-color: #010101;
+    h1,h2,h3, p {
+      color: #f1f1f1;
     }
   }
 }
+
+
 
 @include media(786px) {
   .about {
@@ -25,51 +39,5 @@
     &__img {
       margin: 0 auto;
     }
-  }
-}
-
-
-.waves {
-  position: absolute;
-  height: 500px;
-  width: 8400px;
-  overflow: hidden;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  &:last-child {
- z-index: 1;
-  }
-  .wave {
-    background: url("../assets/wave.svg") repeat-x; 
-    position: absolute;
-
-    bottom: 0;
-    right: 0;
-    width: 8400px;
-    height: 500px;
-    transform: translate3d(0, 0, 0);
-    animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-    &:last-child {
-      animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-      opacity: 0.7;
-      
-    }
-  }
-}
-
-@keyframes wave {
-  0%,  100%{right: 0;}
-  50%{right: 2000px;}
-}
-
-
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-25px,0);
-  }
-  50% {
-    transform: translate3d(0,5px,0);
   }
 }

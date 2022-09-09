@@ -28,6 +28,11 @@ var plugins = [
     cssnano()
 ];
 
+function image() { 
+    return gulp.src('src/img/**/*')
+    .pipe(gulp.dest('./build/assets/img'))
+    .pipe(browserSync.stream());
+}
 
 
 function minJs() {
@@ -74,6 +79,7 @@ function watch() {
     });
     gulp.watch("src/scss/**/*.scss", style)
     gulp.watch("src/script/**/*.js", minJs)
+    gulp.watch('src/img/*', image)
     gulp.watch("src/html/**/*.html", include).on('change', browserSync.reload)
 
 }
@@ -82,6 +88,7 @@ function watch() {
 
 
 function main() {
+    image()
     minJs()
     include()
     style()
